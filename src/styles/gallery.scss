@@ -1,0 +1,113 @@
+.gallery {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 84.4px;
+  .south-east-arrow-wrapper {
+    margin: 1.7rem;
+    margin-bottom: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+    justify-content: flex-start;
+    img {
+      display: block;
+      width: 13vh;
+      transform: translate3d(-13vh, -13vh, 0);
+    }
+    .location {
+      margin-left: 1rem;
+      h4 {
+        transform: translateY(20px);
+      }
+      p {
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+        transform: translateY(20px);
+      }
+    }
+  }
+  .projects {
+    background-color: dodgerblue;
+  }
+}
+
+.flickity-viewport {
+  // margin-top: 1vh;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+  width: 100vw;
+  overflow: hidden;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.project-item {
+  margin: 2rem 2rem;
+  user-select: auto;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+
+  div {
+    .project-image-wrapper {
+      background-color: #fbcc04;
+      height: 52vh;
+      overflow: hidden;
+      opacity: 0;
+
+      .project-image {
+        height: 100%;
+        opacity: 0;
+        transform: translateX(5%);
+        transform: scale(1.1);
+      }
+    }
+
+    .project-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.2rem;
+      height: 20px;
+      overflow: hidden;
+      h3 {
+        letter-spacing: 1px;
+        font-size: 1rem;
+        transform: translateY(30px);
+      }
+      h4 {
+        // letter-spacing: 2px;
+        transform: translateY(30px);
+      }
+    }
+  }
+  .year {
+    .rotate {
+      font-size: 1rem;
+      width: fit-content;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 500;
+
+      transform: rotate(90deg);
+      transform-origin: left top;
+
+      margin-left: 1.3rem;
+      .little {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+.hide-container {
+  overflow: hidden;
+}
+
+.carousel {
+  margin-top: 5vh;
+}

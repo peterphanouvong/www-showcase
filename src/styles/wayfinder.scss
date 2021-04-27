@@ -1,0 +1,42 @@
+.wayfinder {
+  background-color: $yellow;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1.7rem;
+  padding-top: 84.4px;
+
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27vh;
+    border-bottom: 2px solid black;
+    padding: 3rem 0;
+
+    &:nth-of-type(3) {
+      border-bottom: none;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      h2 {
+        text-decoration: line-through;
+        color: white;
+      }
+      img {
+        filter: invert(1);
+      }
+    }
+
+    .menu-item-title {
+      font-size: 15vh;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+    }
+  }
+}
