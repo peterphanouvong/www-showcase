@@ -109,7 +109,7 @@ const Projects = () => {
     wrapAround: true,
     percentPosition: false,
     freeScrollFriction: 0.07,
-    lazyLoad: 3,
+    imagesLoaded: true,
   };
   return (
     <div onWheel={scroll}>
