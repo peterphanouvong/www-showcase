@@ -3,11 +3,11 @@ import WayFinderMenuItem from "./WayFinderMenuItem";
 
 const WayFinderMenu = ({ items }) => {
   return (
-    <div>
+    <>
       {items.map((item, i) => {
-        return <WayFinderMenuItem item={item} key={i} />;
+        return <WayFinderMenuItem item={item} index={i} key={i} />;
       })}
-    </div>
+    </>
   );
 };
 

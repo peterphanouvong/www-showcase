@@ -1,0 +1,158 @@
+.project-page {
+  padding-top: 84px;
+  height: 100vh;
+  overflow: hidden;
+
+  .hero {
+    padding: 1.7rem;
+    padding-bottom: 0;
+    display: flex;
+    height: 100%;
+    .hero-img-wrapper {
+      height: 100%;
+      width: 35vw;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      img {
+        opacity: 0;
+        min-height: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+      }
+    }
+
+    .project-info-wrapper {
+      margin-left: 1rem;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .arrow-wrapper {
+        width: 13vh;
+        overflow: hidden;
+
+        img {
+          transform: translate(-13vh, -13vh);
+        }
+      }
+
+      .project-text-wrapper {
+        padding-bottom: 15vh;
+
+        .project-title-wrapper {
+          overflow: hidden;
+          .project-title {
+            transform: translateY(9rem);
+            text-align: center;
+            font-size: 9rem;
+            letter-spacing: 2px;
+            font-weight: 900;
+          }
+        }
+        .project-subtitle-wrapper {
+          overflow: hidden;
+          .project-subtitle {
+            transform: translateY(2.4rem);
+            margin-top: 1rem;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      .project-title-footer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        overflow: hidden;
+
+        .overflow-container {
+          overflow: hidden;
+
+          .year,
+          .tech {
+            transform: translateY(2rem);
+          }
+        }
+      }
+    }
+  }
+
+  .project-details {
+    height: 100vh;
+    background-color: #1d1d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .overview {
+      display: flex;
+      background-color: #1d1d1d;
+      padding: 5rem 1.5rem;
+
+      .overview-left {
+        flex: 1;
+      }
+
+      .overview-right {
+        flex: 2;
+
+        h2 {
+          width: 85%;
+
+          color: white;
+          font-size: 3vw;
+          text-align: start;
+
+          .tabbed {
+            margin-left: 5rem;
+          }
+
+          span {
+            a {
+              color: white;
+              text-decoration: line-through;
+            }
+          }
+        }
+
+        .services {
+          margin-top: 4rem;
+          color: white;
+          .service {
+            display: flex;
+            align-items: center;
+            border-top: 2px solid white;
+            padding: 1.3rem 0;
+
+            &:last-of-type {
+              border-bottom: 2px solid white;
+            }
+            .name {
+              margin-left: 1rem;
+              font-size: 1.3rem;
+              letter-spacing: 1px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

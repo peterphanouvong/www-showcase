@@ -2,15 +2,15 @@ import React, { useEffect, useRef } from "react";
 
 // Components
 import FlickityW from "react-flickity-component";
-import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 // Animations
 import gsap from "gsap";
 import { colorIn, greyOut } from "../animations/galleryAnimations";
 
 // Images
-import g1 from "../images/gallery-1.png";
-import g2 from "../images/gallery-2.png";
+import g1 from "../images/gallery-2.png";
+import g2 from "../images/gallery-1.png";
 import g3 from "../images/gallery-7.png";
 import SouthEast from "../images/southeast.svg";
 
@@ -21,6 +21,7 @@ const projects = [
     technologies: "React",
     year: "2021",
     id: 0,
+    path: "/projects/0",
   },
   {
     name: "Gallery Project 2",
@@ -28,6 +29,7 @@ const projects = [
     technologies: "React",
     year: "2021",
     id: 1,
+    path: "/projects/1",
   },
   {
     name: "Gallery Project 3",
@@ -35,6 +37,7 @@ const projects = [
     technologies: "React",
     year: "2021",
     id: 2,
+    path: "/projects/2",
   },
 ];
 
@@ -83,14 +86,19 @@ const ProjectItem = ({ project }) => {
 const Projects = () => {
   let scale = 1;
   let flkty = useRef(null);
+  const history = useHistory();
 
   useEffect(() => {
     if (flkty) {
-      flkty.current.velocity = 2;
+      flkty.current.velocity = 12;
       flkty.current.isFreeScrolling = true;
       flkty.current.startAnimation();
+
+      flkty.current.on("staticClick", (_0, _1, _2, cellIndex) => {
+        history.push(projects[cellIndex].path);
+      });
     }
-  });
+  }, [history]);
 
   const scroll = (event) => {
     scale = event.deltaY * -0.15;

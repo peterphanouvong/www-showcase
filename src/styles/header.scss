@@ -1,27 +1,31 @@
 .header {
-  // display: block;
-  // width: 100%;
-  position: relative;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  margin: 0 1.7rem;
   z-index: 100;
   .header-inner {
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0rem 1.7rem;
     padding: 1.7rem 0;
     border-bottom: 1px solid $black;
 
-    .left-link {
+    .links {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       height: 30px;
       overflow: hidden;
+      .left-link {
+        display: flex;
+        align-items: center;
 
-      h2 {
-        transform: translateY(35px);
+        h2 {
+          position: absolute;
+          transform: translateY(35px);
+        }
       }
     }
   }

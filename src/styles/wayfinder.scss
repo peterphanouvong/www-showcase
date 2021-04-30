@@ -13,10 +13,6 @@
     border-bottom: 2px solid black;
     padding: 3rem 0;
 
-    &:nth-of-type(3) {
-      border-bottom: none;
-    }
-
     img {
       height: 100%;
     }
@@ -33,10 +29,14 @@
       }
     }
 
-    .menu-item-title {
-      font-size: 15vh;
-      font-weight: 600;
-      letter-spacing: 0.3rem;
+    .overflow-container {
+      overflow: hidden;
+      height: 100%;
+      .menu-item-title {
+        font-size: 15vh;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+      }
     }
   }
 }
